@@ -17,7 +17,6 @@ footer {
     align-items: center;
     background-color: #eeeeee;
     padding: 3rem;
-    width: 100%;
 }
 </style>
 
