@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import EoxNavbar from '@/components/Navbar.vue'
-import EoxPageContent from '@/components/PageContent.vue'
-import EoxFooter from '@/components/Footer.vue'
+import EoxNavbar from '@/components/EoxNavbar.vue'
+import EoxPageContent from '@/components/EoxPageContent.vue'
+import EoxFooter from '@/components/EoxFooter.vue'
 
 export default {
   components: {
