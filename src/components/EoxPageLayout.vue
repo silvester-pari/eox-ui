@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Material+Icons');
+
 // Unscoped global reset needed for layout
 html, body {
   box-sizing: border-box;

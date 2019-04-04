@@ -1,6 +1,6 @@
 <template>
   <div class="markdown">
-    <div class="test" v-html="markdown">
+    <div v-html="markdown">
       <slot></slot>
     </div>
   </div>
