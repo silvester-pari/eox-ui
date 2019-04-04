@@ -27,6 +27,7 @@
   "unpkg": "./dist/eox.umd.min.js",
   "dependencies": {
     "core-js": "^2.6.5",
+    "marked": "^0.6.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.6"
