@@ -10,17 +10,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// Unscoped global reset
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-</style>
-
 <style lang="scss" scoped>
 footer {
     display: flex;

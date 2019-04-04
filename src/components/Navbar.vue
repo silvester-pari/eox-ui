@@ -2,13 +2,16 @@
   <nav>
     <div class="inner">
       <a class="brand" href="#">
-        <img class="brand-img" :src="brandSrc" :alt="brand">
+        <eox-logo class="brand-img"/>
+        <!-- <img class="brand-img" :src="brandSrc" :alt="brand"> -->
       </a>
 
     </div>
   </nav>  
 </template>
 <script>
+import EoxLogo from '@/components/Logo.vue'
+
 export default {
   props: {
     brand: {
@@ -29,20 +32,12 @@ export default {
     brandSrc() {
       return this.logoEox
     }
+  },
+  components: {
+    EoxLogo,
   }
 };
 </script>
-
-<style lang="scss">
-// Unscoped global reset
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-</style>
 
 <style lang="scss" scoped>
 nav {

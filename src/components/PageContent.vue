@@ -1,14 +1,20 @@
 <template>
   <div class="outer">
-    <div class="inner">
-        <slot></slot>
+    <div class="inner" v-html="markdown">
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import marked from 'marked';
 
+export default {
+  props: ['input'],
+  computed: {
+    markdown() {
+      return marked(this.input, { sanitize: true })
+    }
+  }
 }
 </script>
 
