@@ -10,7 +10,7 @@
   </nav>  
 </template>
 <script>
-import EoxLogo from '@/components/Logo.vue'
+import EoxLogo from '@/components/EoxLogo.vue'
 
 export default {
   props: {

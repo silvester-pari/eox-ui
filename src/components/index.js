@@ -1,8 +1,8 @@
 import Vue from "vue";
-import EoxLogo from "./Logo.vue";
-import EoxNavbar from "./Navbar.vue";
-import EoxPageContent from "./PageContent.vue";
-import EoxFooter from "./Footer.vue";
+import EoxLogo from "./EoxLogo.vue";
+import EoxNavbar from "./EoxNavbar.vue";
+import EoxPageContent from "./EoxPageContent.vue";
+import EoxFooter from "./EoxFooter.vue";
 
 const Components = {
     EoxLogo,
