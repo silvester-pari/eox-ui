@@ -3,7 +3,6 @@
     <div class="inner">
       <a class="brand" href="#">
         <eox-logo class="brand-img"/>
-        <!-- <img class="brand-img" :src="brandSrc" :alt="brand"> -->
       </a>
 
     </div>

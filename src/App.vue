@@ -2,75 +2,96 @@
   <div id="app">
     <eox-page-layout>
       <slot name="page-content">
-When choosing a JavaScript framework to create front-end applications, one has the choice between Google's Angular framework (https://angular.io/), Facebook's React framework (https://reactjs.org/), or the Vue framework (https://vuejs.org/). All three frameworks offer similar funcionality, with the main benefit of keeping an application user interface in sync with the state, a feat not possible to achieve with "vanilla" JavaScript.
+        <eox-markdown id="readme">
+Readme
+======
+
+Many thanks for purchasing our [EOxCloudless] Sentinel-2 2018 product.
+
+You find here our Sentinel-2 cloudless 2018 GeoTIFFs - Viewing Basic product.
+
+Data Format and Structure
+-------------------------
+
+Tiles are stored as GeoTIFFs containing three 8-bits bands (red, green, blue)
+each in a non-projected geographic coordinate system (WGS84, EPSG 4326).
+Compression used is DEFLATE and tile shape is 4096x4096 pixels.
+
+Tiles are structured in a tile pyramid scheme based on the WMTS-simple profile
+defined by the OGC: http://docs.opengeospatial.org/is/13-082r2/13-082r2.html#30
+
+To optimize tile numbers, they are combined into 16x16 bigger tiles
+(metatiles), hence the usual WMTS tile indices (zoom, column, row) don't apply
+exactly. To identify the correct tiles per zoom level, one must use the column
+and row identifier from the zoom level above (z-4).
+
+The zoom levels available are 0-13, where 13 resembles the original resolution
+(10 m).
+
+Paths to the tiles are following the schema: `/{zoom}/{column}/{row}.tif`
+
+License
+-------
+
+Our Sentinel-2 cloudless 2018 GeoTIFFs - Viewing Basic data is provided under
+our "EOX Commercial Attribution-RestrictedUse 1.1 License" ([human readable
+version] or [eox_commercial_attribution-restricteduse_1.1_license_deed.pdf](eox_commercial_attribution-restricteduse_1.1_license_deed.pdf),
+[legal text] or [eox_commercial_attribution-restricteduse_1.1_license.pdf](eox_commercial_attribution-restricteduse_1.1_license.pdf)).
+
+Whenever you use our Sentinel-2 cloudless 2018 GeoTIFFs - Viewing Basic data
+an attribution has to be provided. It shall read:
+
+*"Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2017 & 2018)".*
+
+Where possible it shall include links as follows:
+
+```
+&lt;a href="https://s2maps.eu"&gt;Sentinel-2 cloudless - https://s2maps.eu&lt;/a&gt; by &lt;a href="https://eox.at"&gt;EOX IT Services GmbH&lt;/a&gt; (Contains modified Copernicus Sentinel data 2017 &amp; 2018)
+```
+
+Terms
+-----
+
+Our [General Terms and Conditions] or [general_terms_and_conditions.pdf](general_terms_and_conditions.pdf)
+apply.
 
 
-A quick analysis of these three frameworks gives insight into their main differences:
+Thanks again for your purchase and don't hesitate to send any questions to
+cloudless@eox.at.
 
 
-# Size and load times
-The sizes of the libraries are as follows:
-
-- Angular: 500+ KB
-- React: 100 KB
-- Vue: 80 KB
-
-Although there is a significant difference between the sizes of the frameworks, they are still small as compared to the average webpage size (2+ MB in 2018). Additionally, if you use a popular CDN to load these libraries, it is highly probable that a user has the library already loaded in their local system.
-
-
-# Components
-Components are integral parts of all three frameworks. A component generally gets an input, and changes behavior based on it. This behavior change generally manifests as a change in the UI of some part of the page. The use of components makes it easy to reuse code. A component may be a cart on an e-commerce site or a login box on a social network.
-
-## Angular
-In Angular, components are referred to as directives. Directives are just markers on DOM elements, which Angular can track and attach specific behavior too. Therefore, Angular separates the UI part of components as attributes of HTML tags, and their behaviors in the form of JavaScript code.
-
-## React
-React combines the UI and behavior of components. In React, the same part of the code is responsible for creating a UI element and dictating its behavior.
-
-## Vue
-In Vue, UI and behavior are also a part of components, which makes things more intuitive. However, Vue is highly customizable, which allows you to combine the UI and behavior of components from within a script. Further, you can also use pre-processors in Vue rather than CSS, which is a great functionality. Vue is great when it comes to integration with other libraries, like Twitter's popular CSS-framework Bootstrap.
-
-
-# Learning Curve
-## Angular
-Angular has a steep learning curve, considering it is a complete solution, and mastering Angular requires you to learn associated concepts like TypeScript (a strict syntactical superset of JavaScript, developed and maintained by Microsoft) and MVC.
-
-## React
-React offers a Getting Started guide that should help one set up React in about an hour. The documentation is thorough and complete, with solutions to common issues already present on StackOverflow. React is not a complete framework and advanced features require the use of third-party libraries. This makes the learning curve of the core framework not so steep but depends on the path you take with additional functionality. However, learning to use React does not necessarily mean that you are using the best practices.
-
-## Vue
-Vue provides higher customizability and hence is easier to learn than Angular or React. Further, Vue has an overlap with Angular and React with respect to their functionality like the use of components. Hence, the transition to Vue from either of the two is an easy option. However, simplicity and flexibility of Vue is a double-edged sword — it allows poor code, making it difficult to debug and test. To help, Vue has very circumstantial documentation which can fasten learning curve for developers and save a lot of time to develop an app using only the basic knowledge of HTML and JavaScript.
-
-
-# Community and development
-Vue has a huge number of watchers, stars and forks. This shows its popularity among users. However, the number of commits and contributors for Vue are lower than Angular and React.
-One possible explanation is that Vue is driven entirely by the open source community, whereas Angular and React have a significant share of Google and Facebook employees contributing to the repositories.
-From the statistics, all three projects show significant development activity, and this is surely going to continue in the future.
-
-
-# Migrations and Updates
-Angular plans major updates every six months. There is also a period of another six months before any major APIs are deprecated, which gives you the time of two release cycles (one year) to make necessary changes if any.
-Facebook has stated that stability is of utmost importance to them, as huge companies like Twitter and Airbnb use React. Upgrades through versions are generally the easiest in React, with scripts such as react-codemod helping you to migrate.
-In the FAQ section for Migration, Vue mentions that 90% of the APIs are same if you are migrating from 1.x to 2. There is a migration helper tool that works on the console to assess the status of your app.
-
-
-# License
-All the frameworks are offered via a MIT license.
-
-
-# Conclusion
-According to EOX, the simplicity of Vue, combined with its small size and fast load time, high customizability, ability to integrate well with other libraries, it's shallow learning curve and the rapidly growing open source community enthusiasm, makes it a good choice for developing a frontend appliation. EOX hat the opportunity to gain familiarity with the framework in past projects and is confident about its usage in small- and largescale applications.
+[EOxCloudless]: https://cloudless.eox.at
+[human readable version]: https://cloudless.eox.at/license-deed
+[legal text]: https://cloudless.eox.at/license-legal
+[General Terms and Conditions]: https://cloudless.eox.at/terms-conditions
+        </eox-markdown>
+        <eox-markdown>
+Downloads
+=========
+[eox_commercial_attribution-restricteduse_1.1_license_deed.pdf](eox_commercial_attribution-restricteduse_1.1_license_deed.pdf)\
+[eox_commercial_attribution-restricteduse_1.1_license.pdf](eox_commercial_attribution-restricteduse_1.1_license.pdf)\
+[general_terms_and_conditions.pdf](general_terms_and_conditions.pdf)\
+[LICENSE](LICENSE)\
+[metadata.json](metadata.json)
+        </eox-markdown>
+        <eox-button :color="'eox'" :icon="'cloud_download'" :link="'//eox.at'">Access File Folder</eox-button>
       </slot>
     </eox-page-layout>
   </div>
 </template>
 
 <script>
-import EoxPageLayout from './components/PageLayout.vue'
+import EoxButton from '@/components/EoxButton.vue'
+import EoxLogo from '@/components/EoxLogo.vue'
+import EoxMarkdown from './components/EoxMarkdown.vue'
+import EoxPageLayout from './components/EoxPageLayout.vue'
 
 export default {
   name: 'app',
   components: {
+    EoxButton,
+    EoxLogo,
+    EoxMarkdown,
     EoxPageLayout
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="page">
       <eox-navbar :brand="'EOX'"></eox-navbar>
-        <eox-page-content :input="pageContent">
+        <eox-page-content>
           <slot v-slot:page-content></slot>
         </eox-page-content>
       <eox-footer>
@@ -21,11 +21,6 @@ export default {
     EoxPageContent,
     EoxFooter,
   },
-  computed: {
-    pageContent() {
-      return this.$slots.default[0].text
-    }
-  }
 }
 </script>
 
@@ -36,9 +31,12 @@ html, body {
   margin: 0;
   padding: 0;
 }
+* {
+  font-family: 'Open Sans', sans-serif;
+}
 </style>
 
-<style>
+<style lang="scss" scoped>
 .page {
   display: flex;
   min-height: 100vh;
