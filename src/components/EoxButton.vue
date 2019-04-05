@@ -14,7 +14,19 @@ export default {
     btnClass() {
       switch(this.color) {
         case 'eox':
-          return 'bg-eox'
+          return 'bg-primary'
+          break
+        case 'info':
+          return 'bg-info'
+          break
+        case 'success':
+          return 'bg-success'
+          break
+        case 'warning':
+          return 'bg-warning'
+          break
+        case 'danger':
+          return 'bg-danger'
           break
         default:
           return 'bg-default'
@@ -29,7 +41,6 @@ export default {
 a {
   //reset
   text-decoration: none;
-  display: inline-flex;
 }
 button {
   // reset
@@ -44,17 +55,18 @@ button {
   -webkit-user-select: none; /* for button */
       -moz-user-select: none;
       -ms-user-select: none;
-  display: flex;
 }
 
 a, button {
   // EOX style
+  display: inline-flex;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: .9rem;
   width: auto;
   text-transform: uppercase;
   padding: 1rem 1.5rem;
+  margin: .5rem .5rem .5rem 0;
   border-radius: 3px;
 }
 
@@ -68,8 +80,28 @@ a, button {
   color: #fff;
 }
 
-.bg-eox {
+.bg-primary {
   background: #004170;
+  color: #fff;
+}
+
+.bg-info {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.bg-success {
+  background: #4caf50;
+  color: #fff;
+}
+
+.bg-warning {
+  background: #ff9800;
+  color: #fff;
+}
+
+.bg-danger {
+  background: #f44336;
   color: #fff;
 }
 </style>
