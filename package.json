@@ -1,6 +1,6 @@
 {
   "name": "@eox/ui",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A curated collection of vue.js UI components, EOX style.",
   "author": "Silvester Pari",
   "repository": "https://github.com/silvester-pari/eox-ui",
