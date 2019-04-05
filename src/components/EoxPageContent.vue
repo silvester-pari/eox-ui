@@ -22,5 +22,6 @@ export default {};
   margin: 2rem;
   max-width: 1140px;
   height: auto;
+  padding-top: 5rem;
 }
 </style>
