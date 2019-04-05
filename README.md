@@ -7,6 +7,7 @@ A curated collection of vue.js UI components, EOX style.
 ```
 npm install @eox/ui
 ```
+
 In your `main.js`, or a similar entry point, import the library using:
 ```
 import '@eox/ui';
@@ -30,7 +31,7 @@ import '@eox/ui';
 ```
 <eox-button :color="'eox'" :icon="'dashboard'" :link="'eox.at'">Test</eox-button>
 ```
-- The prop 'color' with the value 'eox' applies EOX style blue background. Default background is grey.
+- The prop 'color' with the value 'eox' applies EOX style blue background. Default background is grey. Other possible values: 'info', 'success', 'warning', 'danger'
 - The prop 'icon' adds an (optional) material-design icon. Any name from the [official documentation](https://material.io/tools/icons/) can be used here.
 - The prop 'link' renders an anchor tag instead of a button, pointing to the passed value.
 
