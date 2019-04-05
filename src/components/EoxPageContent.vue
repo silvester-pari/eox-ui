@@ -20,7 +20,7 @@ export default {
 }
 .inner {
   width: 100%;
-  margin: 1rem;
+  margin: 2rem;
   max-width: 1140px;
   height: auto;
 }

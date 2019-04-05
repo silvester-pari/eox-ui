@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{ shadow : false }">
     <div class="inner">
       <a class="brand" href="#">
         <eox-logo class="brand-img"/>
@@ -30,7 +30,7 @@ export default {
   computed: {
     brandSrc() {
       return this.logoEox
-    }
+    },
   },
   components: {
     EoxLogo,
@@ -41,14 +41,19 @@ export default {
 <style lang="scss" scoped>
 nav {
   background: #fff;
-  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+.shadow {
+  box-shadow: 0 4px 18px 0 rgba(0,0,0,.12),0 7px 10px -5px rgba(0,0,0,.15);
 }
 .inner {
   width: 100%;
-  margin: 0 1rem;
+  margin: 0;
   max-width: 1140px;
+  padding: 2rem;
 }
 .brand-img {
   height: 2rem

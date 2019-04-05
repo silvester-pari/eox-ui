@@ -1,10 +1,16 @@
 <template>
-    <img src="@/assets/EOX_Logo.svg" height="100%"/>
+  <img :src="logoSrc" height="100%"/>
 </template>
 
 <script>
-export default {
+import logo from '@/assets/EOX_Logo.svg';
 
+export default {
+  data() {
+    return {
+      logoSrc: logo
+    }
+  }
 }
 </script>
 

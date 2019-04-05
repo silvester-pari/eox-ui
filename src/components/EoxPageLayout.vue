@@ -5,7 +5,7 @@
           <slot v-slot:page-content></slot>
         </eox-page-content>
       <eox-footer>
-        <div>© 2019 <a href="https://eox.at" target="_blank">EOX IT Services GmbH</a>.</div>
+        <a href="https://eox.at/impressum/" target="_blank">LEGAL NOTICE</a>
       </eox-footer>
     </div>
 </template>
@@ -27,6 +27,11 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Material+Icons');
 
+// TODO global css
+a {
+  text-decoration: none;
+}
+
 // Unscoped global reset needed for layout
 html, body {
   box-sizing: border-box;
@@ -44,5 +49,7 @@ html, body {
   min-height: 100vh;
   flex-direction: column;
   font-family: 'Open Sans';
+  max-width: 100vw;
+  overflow: hidden;
 }
 </style>
