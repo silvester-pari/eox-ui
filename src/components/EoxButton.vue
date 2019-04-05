@@ -1,40 +1,36 @@
 <template>
-    <a v-if="link" :href="link" :class="btnClass">
-      <i v-if="icon" class="material-icons">{{ icon }}</i><slot></slot>
-    </a>
-    <button v-else :class="btnClass">
-        <i v-if="icon" class="material-icons">{{ icon }}</i><slot></slot>
-    </button>
+  <a v-if="link" :href="link" :class="btnClass">
+    <i v-if="icon" class="material-icons">{{ icon }}</i>
+    <slot></slot>
+  </a>
+  <button v-else :class="btnClass">
+    <i v-if="icon" class="material-icons">{{ icon }}</i>
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 export default {
-  props: ['color', 'icon', 'link'],
+  props: ["color", "icon", "link"],
   computed: {
     btnClass() {
-      switch(this.color) {
-        case 'eox':
-          return 'bg-primary'
-          break
-        case 'info':
-          return 'bg-info'
-          break
-        case 'success':
-          return 'bg-success'
-          break
-        case 'warning':
-          return 'bg-warning'
-          break
-        case 'danger':
-          return 'bg-danger'
-          break
+      switch (this.color) {
+        case "eox":
+          return "bg-primary";
+        case "info":
+          return "bg-info";
+        case "success":
+          return "bg-success";
+        case "warning":
+          return "bg-warning";
+        case "danger":
+          return "bg-danger";
         default:
-          return 'bg-default'
-          break
+          return "bg-default";
       }
     }
-  },
-}
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -53,25 +49,26 @@ button {
   padding: 0;
   -webkit-appearance: button; /* for input */
   -webkit-user-select: none; /* for button */
-      -moz-user-select: none;
-      -ms-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-a, button {
+a,
+button {
   // EOX style
   display: inline-flex;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
-  font-size: .9rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
   width: auto;
   text-transform: uppercase;
   padding: 1rem 1.5rem;
-  margin: .5rem .5rem .5rem 0;
+  margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 3px;
 }
 
 .material-icons {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   font-size: 1.3rem;
 }
 

@@ -1,27 +1,30 @@
 <template>
-    <footer>
-        <div class="inner">
-            <div class="left">
-              <slot></slot>
-            </div>
-            <div class="right">
-              © {{ new Date().getFullYear() }} <a href="https://eox.at" target="_blank">EOX IT Services GmbH</a>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <div class="inner">
+      <div class="left">
+        <slot></slot>
+      </div>
+      <div class="right">
+        © {{ new Date().getFullYear() }}
+        <a
+          href="https://eox.at"
+          target="_blank"
+        >EOX IT Services GmbH</a>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
 }
 .inner {
   width: 100%;
@@ -35,7 +38,8 @@ footer {
     text-align: right;
   }
 
-  .left, .right {
+  .left,
+  .right {
     margin: 1rem 0;
   }
 }

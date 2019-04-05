@@ -1,30 +1,20 @@
 <!-- Based on https://github.com/mhayes/vue-twentytwenty -->
 <template>
-  <div class="twentytwenty-container"
+  <div
+    class="twentytwenty-container"
     v-bind:style="containerStyle"
     v-on:touchstart="startSlide"
-    v-on:mousedown="startSlide">
-    <img :src="after" alt="after"
-      v-on:mousedown.prevent
-      v-on:load="setDimensions" />
-    <img :src="before" alt="before"
-      v-on:mousedown.prevent
-      v-bind:style="beforeImgStyle" />
-    <div class="twentytwenty-overlay"
-      v-bind:style="overlayStyle">
+    v-on:mousedown="startSlide"
+  >
+    <img :src="after" alt="after" v-on:mousedown.prevent v-on:load="setDimensions">
+    <img :src="before" alt="before" v-on:mousedown.prevent v-bind:style="beforeImgStyle">
+    <div class="twentytwenty-overlay" v-bind:style="overlayStyle">
       <div v-if="beforeLabel" class="twentytwenty-before-label">{{beforeLabel}}</div>
       <div v-if="afterLabel" class="twentytwenty-after-label">{{afterLabel}}</div>
     </div>
-    <div class="twentytwenty-handle"
-      v-bind:style="handleStyle">
-        <!-- <div class="twentytwenty-touch-area-left"
-          v-on:touchstart="startSlide"
-          v-on:mousedown="startSlide"></div>
-        <div class="twentytwenty-touch-area-right"
-          v-on:touchstart="startSlide"
-          v-on:mousedown="startSlide"></div> -->
-        <div class="twentytwenty-arrow-left"></div>
-        <div class="twentytwenty-arrow-right"></div>
+    <div class="twentytwenty-handle" v-bind:style="handleStyle">
+      <div class="twentytwenty-arrow-left"></div>
+      <div class="twentytwenty-arrow-right"></div>
     </div>
   </div>
 </template>
@@ -73,9 +63,8 @@ export default {
       this.containerStyle = { width: `${this.w}px`, height: `${this.h}px` };
     },
 
-    startSlide(event) {
+    startSlide() {
       this.sliding = true;
-      // this.moveSlide(event)
       this.overlayStyle = { opacity: 0 };
     },
 
@@ -105,7 +94,6 @@ export default {
     beforeImgStyle() {
       return { clip: `rect(0, ${this.x}px, ${this.h}px, 0)` };
     },
-
     handleStyle() {
       const size = 40;
       return {
@@ -115,17 +103,22 @@ export default {
         left: `calc(${this.slideOffset * 100}% - ${size / 2}px)`
       };
     },
-
     x() {
       return this.w * this.slideOffset;
     },
-
     w() {
-      if (this.imgOffset) return this.imgOffset.width;
+      if (this.imgOffset) {
+        return this.imgOffset.width;
+      } else {
+        return null;
+      }
     },
-
     h() {
-      if (this.imgOffset) return this.imgOffset.height;
+      if (this.imgOffset) {
+        return this.imgOffset.height;
+      } else {
+        return null;
+      }
     }
   },
 
