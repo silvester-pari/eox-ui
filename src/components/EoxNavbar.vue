@@ -1,10 +1,9 @@
 <template>
   <nav :class="{ shadow : false }">
     <div class="inner">
-      <a class="brand" href="#">
+      <a class="brand" href="">
         <eox-logo class="brand-img"/>
       </a>
-
     </div>
   </nav>  
 </template>
