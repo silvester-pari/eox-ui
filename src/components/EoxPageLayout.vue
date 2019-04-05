@@ -31,6 +31,12 @@ export default {
 a {
   text-decoration: none;
 }
+.img-raised {
+  box-shadow: 0 5px 15px -8px rgba(0,0,0,.24),0 8px 10px -5px rgba(0,0,0,.2);
+}
+.rounded {
+  border-radius: 6px !important;
+}
 
 // Unscoped global reset needed for layout
 html, body {
