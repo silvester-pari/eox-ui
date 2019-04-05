@@ -2,12 +2,18 @@
 A curated collection of vue.js UI components, EOX style.
 
 ## Installation
+
+### Via npm install
 ```
 npm install @eox/ui
 ```
-or
+In your `main.js`, or a similar entry point, import the library using:
 ```
-<link rel="stylesheet" href="//unpkg.com/@eox/ui/dist/eox.css">
+import '@eox/ui';
+```
+
+### Via script tag
+```
 <script src="//unpkg.com/@eox/ui/dist/eox.umd.min.js"></script>
 ```
 
