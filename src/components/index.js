@@ -1,4 +1,5 @@
 import Vue from "vue";
+import EoxAbCompare from "./EoxAbCompare.vue";
 import EoxButton from "./EoxButton.vue";
 import EoxFooter from "./EoxFooter.vue";
 import EoxLogo from "./EoxLogo.vue";
@@ -8,6 +9,7 @@ import EoxPageContent from "./EoxPageContent.vue";
 import EoxPageLayout from "./EoxPageLayout.vue";
 
 const Components = {
+    EoxAbCompare,
     EoxButton,
     EoxFooter,
     EoxLogo,
