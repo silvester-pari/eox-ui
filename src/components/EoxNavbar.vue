@@ -21,16 +21,6 @@ export default {
       default: "eox"
     }
   },
-  data() {
-    return {
-      logoEox: require("@/assets/EOX_Logo.svg")
-    };
-  },
-  computed: {
-    brandSrc() {
-      return this.logoEox;
-    }
-  },
   components: {
     EoxLogo
   }
